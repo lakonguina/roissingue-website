@@ -4,18 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg" href="static/logo.svg">
-    <link href="static/styles.css" rel="stylesheet" />
+    <link href="static/styles.css?v=0.0.1" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
-        />
-        <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
-    />
     <title>Roissingue</title>
   </head>
   <body>
@@ -41,31 +33,7 @@
     </header>
     <section>
       <h2>Simple integration in minute</h2>
-      <pre class="line-numbers">
-        <code class="language-javascript">
-          const res = await fetch("http://127.0.0.1:8000/quote", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              fromToken: {
-                chainId: 10, // Optimism
-                address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
-              },
-              toToken: {
-                slug: "wrapped-ethereum" // Best route for WETH on any chain
-              },
-              feeToken: {
-                chainId: 10, // Optimism
-                address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
-              },
-              allowChains: [10, 8453],
-              amount: "100000", // 0.1 USDC
-              fromAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
-              toAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
-            }),
-          });
-        </code>
-      </pre>
+      <div id="code"></div>
     </section>
     <section class="features">
       <div>
@@ -96,10 +64,42 @@
       <a href="mailto:contact@roissingue.com">contact@roissingue.com</a>
       </p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
-        <!-- Line numbers plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="module">
+      // be sure to specify the exact version
+      import { codeToHtml } from 'https://esm.sh/shiki@3.0.0'
+    // or
+    // import { codeToHtml } from 'https://esm.run/shiki@3.0.0'
+
+    const codeDiv = document.getElementById('code')
+    const code = `const res = await fetch("http://127.0.0.1:8000/quote", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+    fromToken: {
+        chainId: 10, // Optimism
+        address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
+    },
+    toToken: {
+      slug: "wrapped-ethereum" // Best route for WETH on any chain
+    },
+    feeToken: {
+      chainId: 10, // Optimism
+      address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
+    },
+    allowChains: [10, 8453],
+    amount: "100000", // 0.1 USDC
+    fromAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
+    toAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
+  }),
+});`
+    codeDiv.innerHTML = await codeToHtml(
+    code,
+    {
+      lang: 'js',
+      theme: 'catppuccin-mocha',
+    }
+)
+    </script>
   </body>
 </html>
 
