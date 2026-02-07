@@ -1,104 +1,218 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" type="image/svg" href="static/logo.svg">
-    <link href="static/styles.css?v=0.0.1" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <title>Roissingue</title>
+
+    <!-- Primary SEO -->
+    <title>Roissingue | Gasless Multi-Chain Swap API</title>
+    <meta
+      name="description"
+      content="Roissingue is a unified API for gasless, multi-chain token swaps with smart order routing and best execution."
+    />
+    <link rel="canonical" href="https://roissingue.com/" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/static/logo.svg" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Roissingue | Gasless Multi-Chain Swap API" />
+    <meta
+      property="og:description"
+      content="Execute optimized, gasless swaps across multiple blockchains through a single API."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roissingue.com/" />
+    <meta property="og:image" content="https://roissingue.com/static/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Roissingue | Gasless Multi-Chain Swap API" />
+    <meta
+      name="twitter:description"
+      content="Unified API for optimized, gasless multi-chain token swaps."
+    />
+    <meta name="twitter:image" content="https://roissingue.com/static/og.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link href="/static/styles.css?v=0.0.1" rel="stylesheet" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Roissingue",
+        "url": "https://roissingue.com/",
+        "logo": "https://roissingue.com/static/logo.svg",
+        "sameAs": ["https://discord.gg/cFVDgU5wUe"]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Roissingue",
+        "url": "https://roissingue.com/"
+      }
+    </script>
   </head>
+
   <body>
     <nav>
-      <img loading="lazy" src="static/logo.svg" alt="Roissingue's logo" width="40" height="auto">
+      <a href="/" aria-label="Roissingue home">
+        <img
+          src="/static/logo.svg"
+          alt="Roissingue logo"
+          width="40"
+          height="40"
+          loading="eager"
+        />
+      </a>
+
       <ul>
         <li>
-          <a href="https://docs.roissingue.com/">Documentation</a>
+          <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
         </li>
         <li>
-          <a href="https://discord.gg/cFVDgU5wUe">Discord</a>
+          <a
+            href="https://discord.gg/cFVDgU5wUe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discord
+          </a>
         </li>
       </ul>
     </nav>
+
     <header>
-      <h1>API for <small class="blue">on-chain</small> swap</h1>
-      <p>Gassless, best prices and single signature multi-chain execute.</p>
-      <a href="https://docs.roissingue.com/">
-        <button>
+      <h1>
+        API for <small class="blue">on-chain</small> swap
+      </h1>
+      <p>Roissingue enables fast, gasless multi-chain token swaps with optimized pricing.</p>
+
+      <a href="https://docs.roissingue.com/" class="cta" rel="noopener">
+        <button type="button" aria-label="Get started with Roissingue documentation">
           Get started
         </button>
       </a>
     </header>
-    <section>
-      <h2>Simple integration in minute</h2>
-      <div id="code"></div>
-    </section>
-    <section class="features">
-      <div>
-        <h3>Smart Order Routing</h3>
-        <p>Automatically find the <small class="pink">best prices</small> across DEXs.</p>
-      </div>
-      <div>
-        <h3>Batch & Multichain Execution</h3>
-        <p>Bundle multiple transactions into a single signature across any chain.</p>
-      </div>
-      <div>
-        <h3 class="yellow">Gasless Transactions</h3>
-        <p>Transactions can be sponsored for users.</p>
-      </div>
-      <div>
-        <h3>Token Abstracted</h3>
-        <p>Automatically find the best output for a token on a specific chain.</p>
-      </div>
-    </section>
-    <footer>
-      <p>
-      <a href="https://discord.gg/cFVDgU5wUe">Discord</a>
-      </p>
-      <p>
-      <a href="https://docs.roissingue.com/">Documentation</a>
-      </p>
-      <p>
-      <a href="mailto:contact@roissingue.com">contact@roissingue.com</a>
-      </p>
-    </footer>
-    <script type="module">
-      // be sure to specify the exact version
-      import { codeToHtml } from 'https://esm.sh/shiki@3.0.0'
-    // or
-    // import { codeToHtml } from 'https://esm.run/shiki@3.0.0'
 
-    const codeDiv = document.getElementById('code')
-    const code = `const res = await fetch("http://127.0.0.1:8000/quote", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
+    <main>
+      <section>
+        <h2>Integration in a minute</h2>
+        <p>
+          A single API call to access the best price across chains. We handle routing, gas, and execution. You ship the product.
+        </p>
+
+        <!-- SEO-friendly fallback: visible without JS -->
+        <div id="code">
+          <pre><code class="language-js">const res = await fetch("https://api.roissingue.com/quote", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
     fromToken: {
-        chainId: 10, // Optimism
-        address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
+      chainId: 10, // Optimism
+      address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85" // USDC
     },
     toToken: {
       slug: "wrapped-ethereum" // Best route for WETH on any chain
     },
     feeToken: {
       chainId: 10, // Optimism
-      address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85", // USDC
+      address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85" // USDC
     },
     allowChains: [10, 8453],
     amount: "100000", // 0.1 USDC
     fromAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
-    toAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7",
-  }),
-});`
-    codeDiv.innerHTML = await codeToHtml(
-    code,
-    {
-      lang: 'js',
-      theme: 'catppuccin-mocha',
-    }
-)
+    toAddress: "0x6eBf2153f931334714984c7F5a8E574207927Cc7"
+  })
+});</code></pre>
+        </div>
+      </section>
+
+      <section class="features">
+        <div>
+          <h3>Smart Order Routing</h3>
+          <p>Finds the <small class="pink">best prices</small> across many decentralized exchanges automatically.</p>
+        </div>
+
+        <div>
+          <h3>Multichain Execution</h3>
+          <p>Executes swaps on many blockchains from a single API call.</p>
+        </div>
+
+        <div>
+          <h3>Gasless Transactions</h3>
+          <p>Users can trade by paying with any token.</p>
+        </div>
+
+        <div>
+          <h3>Token Abstraction</h3>
+          <p>Automatically chooses the <span class="yellow">most efficient</span> blockchain for token swaps.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a
+          href="https://discord.gg/cFVDgU5wUe"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discord
+        </a>
+      </p>
+
+      <p>
+        <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
+      </p>
+
+      <p>
+        <a href="mailto:contact@roissingue.com">contact@roissingue.com</a>
+      </p>
+    </footer>
+
+    <script type="module">
+      const codeDiv = document.getElementById("code");
+      const codeEl = codeDiv?.querySelector("code");
+      if (!codeDiv || !codeEl) {
+        // Nothing to enhance
+      } else {
+        const rawCode = codeEl.textContent || "";
+
+        // Load Shiki when the browser is idle (keeps LCP clean)
+        const enhance = async () => {
+          const { codeToHtml } = await import("https://esm.sh/shiki@3.0.0");
+          codeDiv.innerHTML = await codeToHtml(rawCode, {
+            lang: "js",
+            theme: "catppuccin-mocha"
+          });
+        };
+
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(() => enhance());
+        } else {
+          // Fallback
+          setTimeout(() => enhance(), 1);
+        }
+      }
     </script>
   </body>
 </html>
