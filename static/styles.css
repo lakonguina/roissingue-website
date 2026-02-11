@@ -1,8 +1,6 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 pre, code, pre *, code * {
@@ -60,7 +58,7 @@ a {
 }
 
 section, header {
-  padding: 60px 0px;
+  padding: 100px 0px;
 }
 
 header {
@@ -132,5 +130,44 @@ button {
 
   pre code {
     white-space: pre;
+  }
+}
+
+/* Integrations */
+.icons-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.icon-item {
+  text-align: center;
+}
+
+.icon-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(200%);
+  opacity: 0.8;
+}
+
+.icon-label {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+/* Optionnel : pour éviter que ça devienne trop serré sur mobile */
+@media (max-width: 480px) {
+  .icons-container {
+    gap: 40px;
   }
 }

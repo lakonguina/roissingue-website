@@ -3,54 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <!-- Primary SEO -->
     <title>Roissingue | Gasless Multi-Chain Swap API</title>
     <meta
-      name="description"
-      content="Roissingue is a unified API for gasless, multi-chain token swaps with smart order routing and best execution."
-    />
+        name="description"
+        content="Roissingue is a unified API for gasless, multi-chain token swaps with smart order routing and best execution."
+        />
     <link rel="canonical" href="https://roissingue.com/" />
     <meta name="robots" content="index,follow" />
-
-    <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/static/logo.svg" />
     <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Roissingue | Gasless Multi-Chain Swap API" />
     <meta
-      property="og:description"
-      content="Execute optimized, gasless swaps across multiple blockchains through a single API."
-    />
+        property="og:description"
+        content="Execute optimized, gasless swaps across multiple blockchains through a single API."
+        />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://roissingue.com/" />
     <meta property="og:image" content="https://roissingue.com/static/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Roissingue | Gasless Multi-Chain Swap API" />
     <meta
-      name="twitter:description"
-      content="Unified API for optimized, gasless multi-chain token swaps."
-    />
+        name="twitter:description"
+        content="Unified API for optimized, gasless multi-chain token swaps."
+        />
     <meta name="twitter:image" content="https://roissingue.com/static/og.png" />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
-    <link href="/static/styles.css?v=0.0.1" rel="stylesheet" />
-
-    <!-- Structured data -->
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet"
+        />
+    <link href="/static/styles.css?v=0.0.5" rel="stylesheet" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -76,12 +62,12 @@
     <nav>
       <a href="/" aria-label="Roissingue home">
         <img
-          src="/static/logo.svg"
-          alt="Roissingue logo"
-          width="40"
-          height="40"
-          loading="eager"
-        />
+            src="/static/logo.svg"
+            alt="Roissingue logo"
+            width="40"
+            height="40"
+            loading="eager"
+            />
       </a>
 
       <ul>
@@ -90,11 +76,11 @@
         </li>
         <li>
           <a
-            href="https://discord.gg/cFVDgU5wUe"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Discord
+              href="https://discord.gg/cFVDgU5wUe"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              Discord
           </a>
         </li>
       </ul>
@@ -114,13 +100,40 @@
     </header>
 
     <main>
+      <section class="icons-section">
+        <div class="icons-container">
+
+          <div class="icon-item">
+            <img src="/static/circle.svg" alt="Circle">
+            <div class="icon-label">Circle CCTP</div>
+          </div>
+
+
+          <div class="icon-item">
+            <img src="/static/across.webp" alt="Across">
+            <div class="icon-label">Accross</div>
+          </div>
+
+          <div class="icon-item">
+            <img src="/static/lifi.webp" alt="LiFi">
+            <div class="icon-label">LiFi</div>
+          </div>
+
+
+          <div class="icon-item">
+            <img src="/static/chainlink.svg" alt="Chainlink">
+            <div class="icon-label">Chainlink CCIP</div>
+          </div>
+        </div>
+      </section>
+      <p style="text-align: center; font-weight: bold;">Many more integrations</p>
+
       <section>
         <h2>Integration in a minute</h2>
         <p>
-          A single API call to access the best price across chains. We handle routing, gas, and execution. You ship the product.
+        A single API call to access the best price across chains. We handle routing, gas, and execution. You ship the product.
         </p>
 
-        <!-- SEO-friendly fallback: visible without JS -->
         <div id="code">
           <pre><code class="language-js">const res = await fetch("https://api.roissingue.com/quote", {
   method: "POST",
@@ -171,21 +184,21 @@
 
     <footer>
       <p>
-        <a
+      <a
           href="https://discord.gg/cFVDgU5wUe"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           Discord
-        </a>
+      </a>
       </p>
 
       <p>
-        <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
+      <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
       </p>
 
       <p>
-        <a href="mailto:contact@roissingue.com">contact@roissingue.com</a>
+      <a href="mailto:contact@roissingue.com">contact@roissingue.com</a>
       </p>
     </footer>
 
@@ -193,11 +206,8 @@
       const codeDiv = document.getElementById("code");
       const codeEl = codeDiv?.querySelector("code");
       if (!codeDiv || !codeEl) {
-        // Nothing to enhance
       } else {
         const rawCode = codeEl.textContent || "";
-
-        // Load Shiki when the browser is idle (keeps LCP clean)
         const enhance = async () => {
           const { codeToHtml } = await import("https://esm.sh/shiki@3.0.0");
           codeDiv.innerHTML = await codeToHtml(rawCode, {
@@ -209,7 +219,6 @@
         if ("requestIdleCallback" in window) {
           window.requestIdleCallback(() => enhance());
         } else {
-          // Fallback
           setTimeout(() => enhance(), 1);
         }
       }
