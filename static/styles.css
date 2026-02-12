@@ -1,6 +1,14 @@
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #ffffff;
+  background-image: radial-gradient(
+  rgba(0, 0, 0, 0.08) 1px,
+  transparent 1px
+  );
+  background-size: 24px 24px;
+  padding: 10px !important;
 }
 
 pre, code, pre *, code * {
@@ -69,9 +77,10 @@ button {
   background-color: black;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 25px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .blue {
@@ -170,4 +179,8 @@ button {
   .icons-container {
     gap: 40px;
   }
+}
+
+section h2, section p {
+  text-align: center;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Roissingue | Gasless Multi-Chain Swap API</title>
+    <title>Roissingue | API for on-chain swap</title>
     <meta
         name="description"
         content="Roissingue is a unified API for gasless, multi-chain token swaps with smart order routing and best execution."
@@ -11,8 +11,7 @@
     <link rel="canonical" href="https://roissingue.com/" />
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="/static/logo.svg" />
-    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/static/logo.png" />
     <meta property="og:title" content="Roissingue | Gasless Multi-Chain Swap API" />
     <meta
         property="og:description"
@@ -20,7 +19,7 @@
         />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://roissingue.com/" />
-    <meta property="og:image" content="https://roissingue.com/static/og.png" />
+    <meta property="og:image" content="https://roissingue.com/static/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -29,21 +28,18 @@
         name="twitter:description"
         content="Unified API for optimized, gasless multi-chain token swaps."
         />
-    <meta name="twitter:image" content="https://roissingue.com/static/og.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet"
-        />
-    <link href="/static/styles.css?v=0.0.5" rel="stylesheet" />
+    <meta name="twitter:image" content="https://roissingue.com/static/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="/static/styles.css?v=0.0.1" rel="stylesheet" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Roissingue",
         "url": "https://roissingue.com/",
-        "logo": "https://roissingue.com/static/logo.svg",
+        "logo": "https://roissingue.com/static/logo.png",
         "sameAs": ["https://discord.gg/cFVDgU5wUe"]
       }
     </script>
@@ -62,7 +58,7 @@
     <nav>
       <a href="/" aria-label="Roissingue home">
         <img
-            src="/static/logo.svg"
+            src="/static/logo.png"
             alt="Roissingue logo"
             width="40"
             height="40"
@@ -72,7 +68,7 @@
 
       <ul>
         <li>
-          <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
+          <a href="https://docs.roissingue.com/" rel="noopener">Docs</a>
         </li>
         <li>
           <a
@@ -90,8 +86,7 @@
       <h1>
         API for <small class="blue">on-chain</small> swap
       </h1>
-      <p>Roissingue enables fast, gasless multi-chain token swaps with optimized pricing.</p>
-
+      <p>Execute optimized DeFi token swaps, same-chain or multi-step cross-chain, with a single user signature. Gasless and fully routed for best execution.</p>
       <a href="https://docs.roissingue.com/" class="cta" rel="noopener">
         <button type="button" aria-label="Get started with Roissingue documentation">
           Get started
@@ -100,38 +95,14 @@
     </header>
 
     <main>
-      <section class="icons-section">
-        <div class="icons-container">
-
-          <div class="icon-item">
-            <img src="/static/circle.svg" alt="Circle">
-            <div class="icon-label">Circle CCTP</div>
-          </div>
-
-
-          <div class="icon-item">
-            <img src="/static/across.webp" alt="Across">
-            <div class="icon-label">Accross</div>
-          </div>
-
-          <div class="icon-item">
-            <img src="/static/lifi.webp" alt="LiFi">
-            <div class="icon-label">LiFi</div>
-          </div>
-
-
-          <div class="icon-item">
-            <img src="/static/chainlink.svg" alt="Chainlink">
-            <div class="icon-label">Chainlink CCIP</div>
-          </div>
-        </div>
-      </section>
-      <p style="text-align: center; font-weight: bold;">Many more integrations</p>
-
       <section>
         <h2>Integration in a minute</h2>
         <p>
-        A single API call to access the best price across chains. We handle routing, gas, and execution. You ship the product.
+
+        One API call gives you the best available execution across decentralized exchanges and blockchains.
+        We handle routing, multi-step bridging, gas abstraction, and transaction execution.
+        You focus on building.
+
         </p>
 
         <div id="code">
@@ -158,28 +129,6 @@
 });</code></pre>
         </div>
       </section>
-
-      <section class="features">
-        <div>
-          <h3>Smart Order Routing</h3>
-          <p>Finds the <small class="pink">best prices</small> across many decentralized exchanges automatically.</p>
-        </div>
-
-        <div>
-          <h3>Multichain Execution</h3>
-          <p>Executes swaps on many blockchains from a single API call.</p>
-        </div>
-
-        <div>
-          <h3>Gasless Transactions</h3>
-          <p>Users can trade by paying with any token.</p>
-        </div>
-
-        <div>
-          <h3>Token Abstraction</h3>
-          <p>Automatically chooses the <span class="yellow">most efficient</span> blockchain for token swaps.</p>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -194,7 +143,7 @@
       </p>
 
       <p>
-      <a href="https://docs.roissingue.com/" rel="noopener">Documentation</a>
+      <a href="https://docs.roissingue.com/" rel="noopener">Docs</a>
       </p>
 
       <p>
